@@ -1,0 +1,10 @@
+---
+  - hosts: all
+    become: yes
+    vars:
+      mani: "{{ mani }}"
+    tasks:
+      - name: install required packages
+        apt:
+          name: "{{ mani }}"
+          state: present
